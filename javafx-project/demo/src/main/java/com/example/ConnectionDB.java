@@ -8,6 +8,11 @@ import java.sql.SQLException;
 import java.sql.*;
 public class ConnectionDB {
     public void selectStatement(){
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+         } catch (Exception e) {
+            System.out.println(e);
+      }
         Connection conn = null;
         
         try {
